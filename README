@@ -1,0 +1,33 @@
+This is a top-level android project directory, containing files and subdirs used by various build tools.
+
+This dir can be created by the script 'BuildAppTree'
+
+Projects may be built using my custom bash scripts, or by scripts in combination with the 'buck' or 'ant'
+build tools.
+
+Files/dirs used by *all* build tools:
+AndroidManifest.xml
+libs
+res
+src
+
+Files/dirs used by 'ant':
+ant.properties
+build.xml
+local.properties
+project.properties
+gen/
+bin/
+
+Files/dirs used by 'buck':
+BUCK
+buck-out
+
+To build with ant ==> ant release
+this will create following under gen:
+./gen/<packagePath>/R.java
+./gen/<packagePath>/BuildConfig.java
+and many files and subdirs under bin
+
+To remove dirs/files created by ant ==> ant clean
+this will delete bin/ and gen/ dirs
